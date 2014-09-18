@@ -1,8 +1,6 @@
-# Casper
+# PM13
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/).
-
-To download, visit the [releases](https://github.com/TryGhost/Casper/releases) page.
+Modified version of the default theme for [Ghost](http://github.com/tryghost/ghost/), specifically for the personal site of Paul Mederos.
 
 ## Copyright & License
 
