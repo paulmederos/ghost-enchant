@@ -9,6 +9,10 @@ body {
   max-width:840px;
   margin:0 auto;
   position:relative;
+
+  @include mq-personal {
+    padding-top:2em;
+  }
 }
 
 .sidebar {
@@ -17,11 +21,23 @@ body {
   top:12em;
   left:0;
 
+  @include mq-personal {
+    position: relative;
+    width:100%;
+    top:initial;
+    left:initial; 
+    margin-bottom:4em;
+  }
+
   .post-list {
     margin:5rem 0 0;
     padding:1.2em 0 0;
     list-style: none;
     border-top:1px solid #D7D7D9;
+
+    @include mq-personal {
+      margin-top:0;
+    }
   }
 
   h4 { 
@@ -45,6 +61,14 @@ body {
   width:61.69%;
   max-width:496px;
   padding-left:36.318%;
+
+  @include mq-personal {
+    position: relative;
+    width:100%;
+    top:initial;
+    left:initial; 
+    padding:0;
+  }
 }
 
 .post {
