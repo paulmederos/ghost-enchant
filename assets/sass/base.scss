@@ -85,19 +85,13 @@ content: "\f608";
 }
 
 body {
-  -webkit-font-feature-settings: 'kern' 1;
-  -moz-font-feature-settings: 'kern' 1;
-  -ms-font-feature-settings: 'kern' 1;
-  -o-font-feature-settings: 'kern' 1;
-  font-feature-settings: 'kern' 1;
   height: 100%;
   max-height: 100%;
-  font-family: "ff-tisa-sans-web-pro", sans-serif;
-  font-size: 2.2rem;
+  font-family: $primary_font_stack;
+  font-size: 1.8rem;
   line-height: 1.4em;
-  color: $color_slate;
-    -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
+  color: $color_warm_slate;
+  @include font-smoothing();
 }
 
 ::-moz-selection { background: #D6EDFF; }
@@ -110,10 +104,10 @@ h4, h5, h6 {
   -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  color: #2E2E2E;
+  color: $color_warm_slate;
   line-height: 1.15em;
   margin: 0 0 0.3em 0;
-  font-family: $secondary_font_stack;
+  font-family: $primary_font_stack;
 }
 
 h1, h2 {
@@ -123,7 +117,9 @@ h1, h2 {
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size:2.1rem;
+  font-weight:500;
+  margin-bottom:1em;
 }
 
 h4 {
@@ -139,13 +135,13 @@ h6 {
 }
 
 a {
-  color: $color_violet;
+  color: $color_energy_pink;
   transition: color ease 0.3s;
   text-decoration: none;
 }
 
 a:hover {
-  color: #333;
+  color: $color_violet;
   text-decoration: underline;
 }
 
@@ -156,7 +152,8 @@ p, ul, ol, dl {
   -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
   font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
   margin: 0 0 1.5em 0;
-  line-height:1.6;
+  line-height:1.38;
+  font-weight: 300;
 }
 
 ol, ul {
@@ -341,14 +338,14 @@ img {
 ========================================================================== */
 
 /* Clears shit */
-.clearfix:before,
-.clearfix:after {
+.group:before,
+.group:after {
   content: " ";
   display: table;
 }
 
-.clearfix:after { clear: both; }
-.clearfix { *zoom: 1; }
+.group:after { clear: both; }
+.group { *zoom: 1; }
 
 /* Hides shit */
 .hidden {

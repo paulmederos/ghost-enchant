@@ -1,11 +1,13 @@
-$primary_font_stack: "ff-tisa-sans-web-pro", "Proxima Nova", "Helvetica Neue", "Helvetica" sans-serif;
-$secondary_font_stack: "ff-tisa-web-pro", "Georgia", serif;
-
 $color_slate: #5A5866;
+$color_warm_slate: #595050;
 $color_lavendar: #A491FF;
 $color_violet: #826EE6;
+$color_energy_pink: #E91E63;
 
 $primary_font_color: #49484D;
+$primary_font_stack: "museo-sans-rounded", "Helvetica Neue", "helvetica", sans-serif;
+
+$material-curve: cubic-bezier(.62,.28,.23,.99);
 
 // For displaying retina assets
 // Pulled from @Stammy: http://paulstamatiou.com/responsive-retina-blog-development-part-2
@@ -17,12 +19,14 @@ $primary_font_color: #49484D;
   }
 }
 
-@mixin bg-size($width: auto, $height: 100%) { background-size: $width $height; }
+@mixin font-smoothing(){
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
 
-// Silly function to divide the width and height to save me 2 seconds
-// whenever I need to calculate the halved retina background position
-@function double-pos($w, $h) { @return $w*2 $h*2; }
-
+@mixin transition($type: all, $duration: .32s, $function: $material-curve){
+  transition: $type $duration $function;
+}
 
 // For tabelts and mid-sized mobile devices. Typically 54em.
 @mixin mq-tablet {
