@@ -3,6 +3,11 @@
 <main class="content stand-alone" role="main">
   <article class="{{post_class}}">
     {{#post}}
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="{{title}}" />
+      <meta name="twitter:url" content="{{url absolute='true'}}" />
+      <meta name="twitter:description" content="{{excerpt words=40}}..." />
+
       <header class="post-header">
         <h1 class="post-title">{{title}}</h1>
       </header>
@@ -13,7 +18,8 @@
 
       <footer class="post-footer">
         {{#author}}
-          <img class="post-author-avatar"src="{{image}}">
+          <meta name="twitter:site" content="{{bio}}" />
+          <img class="post-author-avatar" src="{{image}}">
           <p>Written by <b>{{name}}</b> on <time class="post-date" datetime="{{date format='MM-YYYY-DD'}}">{{date format="MMM. Do, YYYY"}}</time>.</p>
         {{/author}}
       </footer>
