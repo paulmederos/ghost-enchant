@@ -1,6 +1,6 @@
-# Empty Void 
+
 $ ->
-  $("a.scrollable-anchor").click ->
+  $(document).on 'click', "a.scrollable-anchor", (e) ->
     if location.pathname.replace(/^\//, "") is @pathname.replace(/^\//, "") and location.hostname is @hostname
       target = $(@hash)
       target = (if target.length then target else $("[name=" + @hash.slice(1) + "]"))
@@ -9,6 +9,11 @@ $ ->
           scrollTop: target.offset().top
         , 800, "materialEase"
         false
+
+  $(document).on 'click', '.card-post', (e) ->
+    link = $(@).find("a").first().attr('href')
+    window.location = link
+
 
 
 $.easing.jswing = $.easing.swing

@@ -1,6 +1,6 @@
 (function() {
   $(function() {
-    return $("a.scrollable-anchor").click(function() {
+    $(document).on('click', "a.scrollable-anchor", function(e) {
       var target;
       if (location.pathname.replace(/^\//, "") === this.pathname.replace(/^\//, "") && location.hostname === this.hostname) {
         target = $(this.hash);
@@ -12,6 +12,11 @@
           return false;
         }
       }
+    });
+    return $(document).on('click', '.card-post', function(e) {
+      var link;
+      link = $(this).find("a").first().attr('href');
+      return window.location = link;
     });
   });
 
