@@ -1246,6 +1246,10 @@ img {
   background-image: url("http://paulmederos.s3.amazonaws.com/enchant/enchant-logo.png");
   background-repeat: no-repeat;
   background-position: center center; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
+    .enchant-logo {
+      background-image: url("http://paulmederos.s3.amazonaws.com/enchant/enchant-logo@2x.png");
+      background-size: 44px 44px; } }
 
 /*  =======================
     Home page

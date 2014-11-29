@@ -68,6 +68,11 @@
   background-image: url('http://paulmederos.s3.amazonaws.com/enchant/enchant-logo.png');
   background-repeat: no-repeat;
   background-position: center center;
+
+  @include retina {
+    background-image: url('http://paulmederos.s3.amazonaws.com/enchant/enchant-logo@2x.png');
+    background-size: 44px 44px; 
+  }
 }
 
 
