@@ -12,13 +12,11 @@
       </section>
 
       <footer class="post-footer">
-        <section class="post-meta">
-          <time class="post-date" datetime="{{date format='MM-YYYY-DD'}}">
-            {{date format="MMMM Do, YYYY \at h:mma"}}
-          </time> 
-        </section>
+        {{#author}}
+          <img class="post-author-avatar"src="{{image}}">
+          <p>Written by <b>{{name}}</b> on <time class="post-date" datetime="{{date format='MM-YYYY-DD'}}">{{date format="MMM. Do, YYYY"}}</time>.</p>
+        {{/author}}
       </footer>
     {{/post}}
   </article>
-
 </main><!-- /.content -->
