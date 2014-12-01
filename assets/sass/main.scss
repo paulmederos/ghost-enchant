@@ -155,7 +155,12 @@
   transform: translateY(-1em);
   opacity: 0;
 
-  @include mq-personal { top:14em; }
+  @include mq-personal {
+    top:14em;
+    left: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
 
   h3 { text-align: center; }
 }
@@ -194,12 +199,30 @@
 /*  =======================
     Home page
 =========================== */
+.intro {
+  padding-top: 20rem;
+  background-repeat: no-repeat;
+  background-position: right 0;
+  background-image: url('http://paulmederos.s3.amazonaws.com/enchant/illustration-devices.png');
+  background-size:622px 375px;
+
+  @include retina {
+    background-image: url('http://paulmederos.s3.amazonaws.com/enchant/illustration-devices@2x.png');
+  }
+
+  @include mq-personal {
+    background-position: center 3em;
+    background-size:466px 281px;
+  }
+}
 
 .intro h1 {
   color: $color_energy_pink;
-  margin:6em 0 4em;
+  margin:0 0 4em;
   font-size:3.2rem;
   font-weight: 500;
+
+  @include mq-personal { text-align: center;}
 }
 
 .subheader {
