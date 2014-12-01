@@ -8,13 +8,13 @@
     <p>When we’re not building products, we’re teaching others to do the same, by <a href="http://designpaloalto.com">hosting community events</a> to inspire others, or mentoring the next generation of designers.</p>
   </section>
 
-  <section class="team" name="about">
+  <section class="team" name="about" id="about">
     <p class="subheader">Enchant is our interactive design studio.</p>
     <div class="group">
       <div class="card-profile brittany">
         <div class="profile-photo"></div>
         <div class="profile-overview">
-          <a class="button button-action button-twitter" href="http://twitter.com/brim" target="_blank"></a>
+          <a class="button button-material button-action button-twitter" href="http://twitter.com/brim" target="_blank"></a>
           <h3>Brittany Mederos</h3>
           <p>Brittany is a lead interaction designer at <a href="http://elementum.com" target="_blank">Elementum SCM</a>, building their flagship application: Transport. She specializes in user research, usability, &amp; interaction design.</p>
         </div>
@@ -22,7 +22,7 @@
       <div class="card-profile paul">
         <div class="profile-photo"></div>
         <div class="profile-overview">
-          <a class="button button-action button-twitter" href="http://twitter.com/brim" target="_blank"></a>
+          <a class="button button-material button-action button-twitter" href="http://twitter.com/brim" target="_blank"></a>
           <h3>Paul Mederos</h3>
           <p>Paul leads product design at <a href="http://mypowersupply.com" target="_blank">Power Supply</a>. He specializes in behavior design (making and breaking habits), product management, interface design, &amp; prototyping.</p>
         </div>
@@ -30,9 +30,14 @@
     </div>
   </section>
 
-  <section class="blog" name="blog">
+  <section class="blog" name="blog" id="blog">
     <p class="subheader">Think of this as a cozy hearth, a space where we share our thoughts on design and business. See if any of our recent posts interest you:</p>
     {{> "home-loop"}}
   </section>
 </main>
 
+<script type="text/javascript">
+  if (typeof analytics !== "undefined") {
+    analytics.page("Home");
+  }
+</script>
