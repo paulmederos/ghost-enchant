@@ -1,7 +1,12 @@
-{{#foreach posts}}
-  <div class="card-post">
-    {{#author}}<img class="post-author-avatar"src="{{image}}">{{/author}}
-    <h3 class="post-title"><a href="{{url}}">{{{title}}}</a></h3>
-    <p class="post-excerpt">{{excerpt words="36"}}...</p>
-  </div>
-{{/foreach}}
+<div class="visible-posts">
+  {{#foreach posts}}
+    <div class="card-post animated fadeInUp">
+      {{#author}}<img class="post-author-avatar"src="{{image}}">{{/author}}
+      <h3 class="post-title"><a href="{{url}}">{{{title}}}</a></h3>
+      <p class="post-excerpt">{{excerpt words="36"}}...</p>
+    </div>
+  {{/foreach}}
+</div>
+
+<div class="hidden-posts hidden"></div>
+<a href="#" class="show-more-posts" style="max-width:600px; display:block; text-align:right; outline:none;">Show more posts</a>

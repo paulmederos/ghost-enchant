@@ -1,5 +1,31 @@
 (function() {
   $(function() {
+    var $hiddenPostsContainer, $posts, postsToShow;
+    if ($('.card-post').length > 0) {
+      postsToShow = 2;
+      $posts = $('.card-post');
+      $hiddenPostsContainer = $('.hidden-posts');
+      $posts.each(function(index, element) {
+        if (index >= postsToShow) {
+          return $(element).appendTo($hiddenPostsContainer);
+        }
+      });
+    }
+    $(document).on('click', '.show-more-posts', function(e) {
+      var $visiblePostsContainer, postsToReveal;
+      postsToReveal = 3;
+      $hiddenPostsContainer = $('.hidden-posts');
+      $visiblePostsContainer = $('.visible-posts');
+      $hiddenPostsContainer.find('.card-post').each(function(index, element) {
+        if (index < postsToReveal) {
+          $(element).appendTo($visiblePostsContainer);
+          if ($hiddenPostsContainer.find('.card-post').length === 0) {
+            return $('.show-more-posts').hide();
+          }
+        }
+      });
+      return e.preventDefault();
+    });
     $(document).on('click', "a.scrollable-anchor", function(e) {
       var target;
       if (location.pathname.replace(/^\//, "") === this.pathname.replace(/^\//, "") && location.hostname === this.hostname) {

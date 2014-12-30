@@ -20,8 +20,10 @@
         {{#author}}
           <meta name="twitter:site" content="{{location}}" />
           <img class="post-author-avatar" src="{{image}}">
-          <p>Written by <b>{{name}}</b> on <time class="post-date" datetime="{{date format='MM-YYYY-DD'}}">{{date format="MMM. Do, YYYY"}}</time>.</p>
+          <p>Written by <b>{{name}}</b>
         {{/author}}
+          on <time class="post-date" datetime="{{date format='MM-YYYY-DD'}}">{{date format="MMM. Do, YYYY"}}</time>.</p>
+        
       </footer>
     {{/post}}
   </article>
