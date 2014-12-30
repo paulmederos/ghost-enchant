@@ -3,7 +3,7 @@ $ ->
   # Only show certain # of posts on home; 
   # Hide the rest until needed.
   if $('.card-post').length > 0
-    postsToShow = 2
+    postsToShow = 4
     $posts =  $('.card-post')
     $hiddenPostsContainer = $('.hidden-posts')
 

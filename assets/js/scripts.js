@@ -2,7 +2,7 @@
   $(function() {
     var $hiddenPostsContainer, $posts, postsToShow;
     if ($('.card-post').length > 0) {
-      postsToShow = 2;
+      postsToShow = 4;
       $posts = $('.card-post');
       $hiddenPostsContainer = $('.hidden-posts');
       $posts.each(function(index, element) {
