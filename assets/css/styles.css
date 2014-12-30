@@ -1494,6 +1494,8 @@ section.blog {
 
 article.post {
   margin-top: 4em; }
+  article.post h1 {
+    font-size: 4.2rem; }
   article.post .post-footer {
     position: relative;
     padding-left: 4em;
