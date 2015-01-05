@@ -1458,7 +1458,7 @@ section {
       background-image: url("http://paulmederos.s3.amazonaws.com/enchant/twitter@2x.png"); } }
 
 section.blog {
-  border-bottom: none; }
+  padding-top: 10rem; }
 
 .card-post {
   position: relative;
