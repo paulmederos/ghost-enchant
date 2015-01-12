@@ -389,6 +389,62 @@ article.post {
   width:100%;
 }
 
+.writing-a-book {
+  position: relative;
+  margin-bottom: 6rem;
+  padding: 2rem;
+  border-radius: 4px;
+  border: 1px solid rgb(255, 126, 199);
+
+  .ux-book {
+    position: absolute;
+    left: 3rem;
+    top: 3rem;
+    margin: 0; 
+
+    @include mq-personal {
+      position:relative;
+      left:0;
+      top:0;
+      margin: 1em auto;
+    }
+  }
+
+  h3 {
+    padding-left: 16rem;
+    margin-top: 2rem;
+    @include mq-personal { padding-left:0; text-align:center; font-size:2.1rem; }
+  }
+
+  p {
+    margin-bottom: .5em;
+    padding-left: 16rem;
+    @include mq-personal { padding-left:0; text-align:left; font-size:1.5rem; }
+  }
+
+  .email-input {
+    margin: 0;
+    left: 16rem;
+    position: relative;
+    text-align: left;
+    @include mq-personal { left:0; text-align:center; margin:.5em auto; }
+  }
+
+  .submit-mailchimp {
+    margin: .5em 0;
+    left: 16rem;
+    position: relative;
+    @include mq-personal { left:0; text-align:center; margin:.5em auto; }
+  }
+
+  .mce-responses {
+    position: relative;
+    left: 16.5rem;
+    max-width: 29rem;
+    @include mq-personal { left:0; text-align:center; margin:.5em auto; }
+  }
+
+}
 
 
 

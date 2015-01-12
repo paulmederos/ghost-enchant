@@ -20,13 +20,21 @@
         {{#author}}
           <meta name="twitter:site" content="{{location}}" />
           <img class="post-author-avatar" src="{{image}}">
-          <p>Written by <b>{{name}}</b>
+          <p>Written by <b>{{name}}</b> (<a href="http://twitter.com/{{location}}" target="_blank">{{location}}</a>)
         {{/author}}
           on <time class="post-date" datetime="{{date format='MM-YYYY-DD'}}">{{date format="MMM. Do, YYYY"}}</time>.</p>
         
       </footer>
     {{/post}}
   </article>
+  <div class="writing-a-book">
+    <img src="http://paulmederos.s3.amazonaws.com/enchant/illustration-UX_book-v1.png" class="ux-book">
+    <h3>We're working on a book.</h3>
+    <p style="margin-bottom:.5em;">It's called <b>"Step-by-step Guide: Crafting Your UX Portfolio"</b> and it's aimed at people who want to break into interaction design professionally. We'll break down 
+    what the best design cultures are looking for when hiring interaction designers.</p>
+    <p><i>Bonus: toss in your email and we'll send you a special gift... the gift of knowledge!</i></p>
+    {{> "mailchimp"}}
+  </div>
 </main><!-- /.content -->
 
 <script type="text/javascript">
