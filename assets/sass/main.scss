@@ -11,8 +11,13 @@
 }
 
 .content {
-  h1, h2, h3, p {
+  h1, h2, h3, p, ul, ol {
     max-width:600px; /* 600px */
+  }
+
+  ul, ol {
+    box-sizing:border-box;
+    li { margin-bottom: 1em;}
   }
 }
 
@@ -387,6 +392,10 @@ article.post {
 
 .post-content img {
   width:100%;
+}
+
+.post-content h3 {
+  margin-top:2em;
 }
 
 .writing-a-book {
